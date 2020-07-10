@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { JsonInputComponent } from './jsonInput/jsonInput.component';
-import { JsonEditorComponent } from './json-editor/json-editor.component'
+import { JsonEditorComponent } from './json-editor/json-editor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { JsonEditorComponent } from './json-editor/json-editor.component'
     JsonEditorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
