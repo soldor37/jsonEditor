@@ -1,4 +1,4 @@
-import {Component} from '@angular/core'
+import {Component, Input, Output, EventEmitter} from '@angular/core'
 
 @Component({
     selector: 'app-jsonInput',
@@ -6,5 +6,20 @@ import {Component} from '@angular/core'
     styleUrls: ['./jsonInput.component.css']
 })
 export class JsonInputComponent {
-    textInput: string = '';
+    @Input() textInput: string;
+     //textInput: string = '';
+
+    jsonObj = {};
+    @Output() jsonIn: EventEmitter<object> = new EventEmitter();
+
+    public jsonToObj(textVar){
+        this.jsonObj = {};
+        this.jsonObj = JSON.parse(textVar);
+        this.jsonIn.emit(this.jsonObj);
+    }
+    // jsonObj = {};
+    // jsonToObg(textVar): void{
+    //     this.jsonObj = {};
+    //     this.jsonObj = JSON.parse(textVar);
+    // }
 }

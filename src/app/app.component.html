@@ -1,7 +1,7 @@
 <div class="app">
   <div class="page">
-    <app-jsonInput></app-jsonInput>
-   <!-- <app-jsonEdit></app-jsonEdit> -->
+    <app-jsonInput (jsonIn)="onJsonInput($event)"></app-jsonInput>
+   <app-jsonEdit [tmpJson]="jsonObj"></app-jsonEdit>
    <!-- <app-jsonSave></app-jsonSave> -->
   </div>
 </div>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jsonEditor';
+
+  jsonObj = {};
+  public onJsonInput(jsonObj){
+    // console.log(jsonObj)
+    this.jsonObj = jsonObj;
+  }
 }
