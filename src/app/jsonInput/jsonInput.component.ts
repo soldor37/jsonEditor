@@ -5,4 +5,6 @@ import {Component} from '@angular/core'
     templateUrl: './jsonInput.component.html',
     styleUrls: ['./jsonInput.component.css']
 })
-export class JsonInputComponent {}
+export class JsonInputComponent {
+    textInput: string = '';
+}
