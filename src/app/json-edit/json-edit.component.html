@@ -2,7 +2,20 @@
 <div class="card border-0">
     <div class="table-responsive">
         <div class="table">
-            
+            <table class="jsonTable">
+                <thead>
+                    <tr>
+                        <th scope="col" *ngFor="let item of tmpJson[0] | keyvalue">{{item.key}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let obj of tmpJson">
+                        <td *ngFor="let item of obj | keyvalue">
+                            {{item.value}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <button class="btn btn-primary " type="button">Save</button>
