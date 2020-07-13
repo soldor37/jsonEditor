@@ -11,9 +11,15 @@ export class JsonEditComponent implements OnInit {
   @Output() jsonOut: EventEmitter<object> = new EventEmitter();
   public jsonToOut() {
     let tmp: string = JSON.stringify(this.tmpJson);
-    this.jsonOut.emit({text: tmp});
+    this.jsonOut.emit({ text: tmp });
   }
 
+  deleteRow(item: string) {
+    const index: number = this.tmpJson.indexOf(item);
+    if (index !== -1) {
+        this.tmpJson.splice(index, 1);
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
