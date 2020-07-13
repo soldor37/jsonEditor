@@ -14,10 +14,16 @@ export class JsonEditComponent implements OnInit {
     this.jsonOut.emit({ text: tmp });
   }
 
+  tmpObj: object = {};
+
+  addRow(obj) {
+    this.tmpJson.push(obj);
+    this.tmpObj = {};
+  }
   deleteRow(item: string) {
     const index: number = this.tmpJson.indexOf(item);
     if (index !== -1) {
-        this.tmpJson.splice(index, 1);
+      this.tmpJson.splice(index, 1);
     }
   }
   constructor() { }

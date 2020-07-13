@@ -16,3 +16,10 @@
     margin-bottom: 15px;
     min-height: 225px;
 }
+.table__buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+.saveBtn{
+    min-width: 130px;
+}

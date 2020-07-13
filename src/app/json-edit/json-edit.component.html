@@ -1,5 +1,5 @@
 <div class="card border-0">
-    <h2 class="page__title" >Edit</h2>
+    <h2 class="page__title">Edit</h2>
     <div class="table-wrap">
         <div class="table" *ngIf="tmpJson.length">
             <table class="jsonTable table-hover table-bordered table-responsive-sm">
@@ -17,9 +17,19 @@
                         </td>
                         <td><button class="btn btn-danger" type="button" (click)="deleteRow(obj)">Delete</button></td>
                     </tr>
+                    <tr>
+                        <td *ngFor="let obj of tmpJson[0] | keyvalue">
+                            <input type="text" class="form-control" required [(ngModel)]="tmpObj[obj.key]">
+                        </td>
+                        <td>
+                            <button class="btn btn-info" type="button" (click)="addRow(tmpObj)">New record</button>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <button class="btn btn-primary" type="button" (click)="jsonToOut()">Save</button>
+    <div class="table__buttons">
+        <button class="btn btn-primary saveBtn" type="button" (click)="jsonToOut()">Save</button>
+    </div>
 </div>
