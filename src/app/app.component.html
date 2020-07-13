@@ -5,10 +5,10 @@
         <app-jsonInput (jsonIn)="onJsonInput($event)"></app-jsonInput>
       </div>
       <div class="col-6">
-        <app-jsonEdit [tmpJson]="jsonObj"></app-jsonEdit>
+        <app-jsonEdit [tmpJson]="jsonObj" (jsonOut)="onJsonOut($event)"></app-jsonEdit>
       </div>
       <div class="col-3">
-        <app-jsonSave></app-jsonSave>
+        <app-jsonSave [jsonOut]="jsonOut"></app-jsonSave>
       </div>
     </div>
   </div>

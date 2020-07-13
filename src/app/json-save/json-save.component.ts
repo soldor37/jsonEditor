@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-jsonSave',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./json-save.component.css']
 })
 export class JsonSaveComponent implements OnInit {
+  @Input() jsonOut;
 
   constructor() { }
 

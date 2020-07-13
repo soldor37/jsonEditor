@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'jsonEditor';
 
-  jsonObj = {};
+  jsonObj = [];
+  jsonOut = [];
   public onJsonInput(jsonObj){
     // console.log(jsonObj)
     this.jsonObj = jsonObj;
+  }
+  public onJsonOut(jsonOut){
+    // console.log(jsonObj)
+    this.jsonOut = jsonOut;
   }
 }

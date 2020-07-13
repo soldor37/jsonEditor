@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-jsonEdit',
@@ -8,24 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class JsonEditComponent implements OnInit {
   @Input() tmpJson;
 
-  // tmpJson = [
-  //   {
-  //     "name": "Name 1",
-  //     "year": "2001",
-  //     "jopa" : "yes"
-      
-  //   },
-  //   {
-  //     "name": "Name 2",
-  //     "year": "2002",
-  //     "jopa" : "no"
-  //   },
-  //   {
-  //     "name": "Name 3",
-  //     "year": "2003",
-  //     "jopa" : "mb"
-  //   }
-  // ]
+  @Output() jsonOut: EventEmitter<object> = new EventEmitter();
+  public jsonToOut() {
+    let tmp: string = JSON.stringify(this.tmpJson);
+    this.jsonOut.emit({text: tmp});
+  }
 
   constructor() { }
 

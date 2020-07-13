@@ -1,8 +1,8 @@
 <div class="card border-0">
-    <h2 class="page__title" >Json edit</h2>
-    <div class="table-responsive">
+    <h2 class="page__title" >Edit</h2>
+    <div class="table-wrap">
         <div class="table" *ngIf="tmpJson.length">
-            <table class="jsonTable">
+            <table class="jsonTable table-hover table-bordered table-responsive-sm">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col" *ngFor="let item of tmpJson[0] | keyvalue">{{item.key}}</th>
@@ -11,12 +11,13 @@
                 <tbody>
                     <tr *ngFor="let obj of tmpJson">
                         <td *ngFor="let item of obj | keyvalue">
-                            {{item.value}}
+                            <!-- {{item.value}} -->
+                            <input type="text" class="form-control" required [(ngModel)]="item.value">
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <button class="btn btn-primary " type="button">Save</button>
+    <button class="btn btn-primary" type="button" (click)="jsonToOut()">Save</button>
 </div>
