@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./json-edit.component.css']
 })
 export class JsonEditComponent implements OnInit {
-  @Input() tmpJson: object;
+  @Input() tmpJson;
 
   // tmpJson = [
   //   {

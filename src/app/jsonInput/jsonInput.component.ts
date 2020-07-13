@@ -9,11 +9,11 @@ export class JsonInputComponent {
     @Input() textInput: string;
      //textInput: string = '';
 
-    jsonObj = {};
+    jsonObj = [];
     @Output() jsonIn: EventEmitter<object> = new EventEmitter();
 
     public jsonToObj(textVar){
-        this.jsonObj = {};
+        this.jsonObj = [];
         this.jsonObj = JSON.parse(textVar);
         this.jsonIn.emit(this.jsonObj);
     }

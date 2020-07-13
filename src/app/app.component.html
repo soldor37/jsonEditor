@@ -1,7 +1,15 @@
 <div class="app">
   <div class="page">
-    <app-jsonInput (jsonIn)="onJsonInput($event)"></app-jsonInput>
-   <app-jsonEdit [tmpJson]="jsonObj"></app-jsonEdit>
-   <!-- <app-jsonSave></app-jsonSave> -->
+    <div class="row">
+      <div class="col-3">
+        <app-jsonInput (jsonIn)="onJsonInput($event)"></app-jsonInput>
+      </div>
+      <div class="col-6">
+        <app-jsonEdit [tmpJson]="jsonObj"></app-jsonEdit>
+      </div>
+      <div class="col-3">
+        <app-jsonSave></app-jsonSave>
+      </div>
+    </div>
   </div>
 </div>
