@@ -10,11 +10,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let obj of tmpJson">
-                        <td *ngFor="let item of obj | keyvalue">
-                            <input type="text" class="form-control" required [(ngModel)]="item.value">
+                    <tr *ngFor="let obj of tmpJson; let id = index;" >
+                        <td *ngFor="let item of tmpJson[id] | keyvalue trackBy: trackByFn">
+                            <!-- {{tmpJson[obj.key][item.key] | json}} -->
+                            <input type="text" class="form-control" [(ngModel)]="tmpJson[id][item.key]" >
                         </td>
-                        <td><button class="btn btn-danger" type="button" (click)="deleteRow(obj)">Delete</button></td>
+                        <td><button class="btn btn-danger" type="button" (click)="deleteRow(tmpJson[id])">Delete</button></td>
                     </tr>
                     <tr>
                         <td *ngFor="let obj of tmpJson[0] | keyvalue">
@@ -27,6 +28,9 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="alert alert-danger show" role="alert" id="alertInputRow">
+            <strong>Fill in all fields!</strong>
         </div>
     </div>
     <div class="table__buttons">

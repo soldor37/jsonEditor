@@ -29,3 +29,6 @@ th {
 .form-control {
     min-width: 50px;
 }
+.show{
+    display: none;
+}
