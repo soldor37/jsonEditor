@@ -11,3 +11,8 @@
 .inputJson-form__submit{
     margin-top: 15px;
 }
+.input-group-text{
+    display: flex;
+    flex-flow: column;
+    justify-content: center
+}
