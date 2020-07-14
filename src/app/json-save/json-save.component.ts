@@ -8,9 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class JsonSaveComponent implements OnInit {
   @Input() jsonOut;
 
-  constructor() { }
+ 
+constructor() { }
 
-  ngOnInit(): void {
-  }
+ngOnInit(): void {
+}
 
 }

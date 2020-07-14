@@ -7,4 +7,5 @@
 }
 .inputJson-form__submit{
     margin-top: 15px;
+    align-self: flex-end;
 }

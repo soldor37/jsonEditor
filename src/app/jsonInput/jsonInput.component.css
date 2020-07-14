@@ -16,3 +16,10 @@
     flex-flow: column;
     justify-content: center
 }
+.alert{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+.show{
+    display: none;
+}

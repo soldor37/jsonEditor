@@ -13,9 +13,15 @@ export class JsonInputComponent {
     @Output() jsonIn: EventEmitter<object> = new EventEmitter();
 
     public jsonToObj(textVar){
-        this.jsonObj = [];
-        this.jsonObj = JSON.parse(textVar);
-        this.jsonIn.emit(this.jsonObj);
+        let alert = document.getElementById('alertInput');
+        alert.style.display = "none";
+        try {
+            this.jsonObj = [];
+            this.jsonObj = JSON.parse(textVar);
+            this.jsonIn.emit(this.jsonObj);
+        }catch(err){
+            alert.style.display = "inline";
+        }
     }
 
     public changeListener(files: FileList){

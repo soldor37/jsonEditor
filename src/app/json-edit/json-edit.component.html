@@ -19,7 +19,8 @@
                     </tr>
                     <tr>
                         <td *ngFor="let obj of tmpJson[0] | keyvalue">
-                            <input type="text" class="form-control" required [(ngModel)]="tmpObj[obj.key]">
+                            <input type="text" class="form-control" [(placeholder)]="obj.key"
+                                [(ngModel)]="tmpObj[obj.key]">
                         </td>
                         <td>
                             <button class="btn btn-info" type="button" (click)="addRow(tmpObj)">New record</button>

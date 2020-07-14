@@ -10,8 +10,12 @@
             placeholder="Put your JSON text here..." [(ngModel)]="textInput"></textarea>
     </div>
     <div class="custom-file">
-        <input type="file" class="custom-file-input" id="inputGroupFile01" (change)="changeListener($event.target.files)">
+        <input type="file" class="custom-file-input" id="inputGroupFile01"
+            (change)="changeListener($event.target.files)">
         <label class="custom-file-label" for="inputGroupFile01">From .txt file</label>
+    </div>
+    <div class="alert alert-danger show" role="alert" id="alertInput">
+        <strong>Invalid JSON input!</strong>
     </div>
     <button class="inputJson-form__submit btn btn-primary " type="button" (click)="jsonToObj(textInput)">Submit</button>
 </div>
