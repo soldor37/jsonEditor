@@ -49,7 +49,7 @@ export class JsonEditComponent implements OnInit {
   }
   deleteRow(item: string) {
     const index: number = this.tmpJson.indexOf(item);
-    if (index !== -1) {
+    if (index !== -1 && this.tmpJson.length-1 ) {
       this.tmpJson.splice(index, 1);
     }
   }
