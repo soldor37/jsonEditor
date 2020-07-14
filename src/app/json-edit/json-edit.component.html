@@ -12,14 +12,13 @@
                 <tbody>
                     <tr *ngFor="let obj of tmpJson">
                         <td *ngFor="let item of obj | keyvalue">
-                            <!-- {{item.value}} -->
                             <input type="text" class="form-control" required [(ngModel)]="item.value">
                         </td>
                         <td><button class="btn btn-danger" type="button" (click)="deleteRow(obj)">Delete</button></td>
                     </tr>
                     <tr>
                         <td *ngFor="let obj of tmpJson[0] | keyvalue">
-                            <input type="text" class="form-control" [(placeholder)]="obj.key"
+                            <input type="text" name="tdData" class="form-control" [(placeholder)]="obj.key"
                                 [(ngModel)]="tmpObj[obj.key]">
                         </td>
                         <td>

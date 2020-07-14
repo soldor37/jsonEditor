@@ -11,3 +11,8 @@
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px #999;
 }
+@media screen and (max-width: 770px) {
+    .btn{
+        width: 100%;
+    }
+}

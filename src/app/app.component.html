@@ -1,13 +1,13 @@
 <div class="app">
   <div class="page">
     <div class="row">
-      <div class="col-3">
+      <div class="col-md-3">
         <app-jsonInput (jsonIn)="onJsonInput($event)"></app-jsonInput>
       </div>
-      <div class="col-6">
+      <div class="col-md-6">
         <app-jsonEdit [tmpJson]="jsonObj" (jsonOut)="onJsonOut($event)"></app-jsonEdit>
       </div>
-      <div class="col-3">
+      <div class="col-md-3">
         <app-jsonSave [jsonOut]="jsonOut"></app-jsonSave>
       </div>
     </div>

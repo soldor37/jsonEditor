@@ -17,6 +17,7 @@ export class JsonEditComponent implements OnInit {
   tmpObj: object = {};
 
   addRow(obj) {
+    // console.log(Object.keys(this.tmpJson[0]))
     this.tmpJson.push(obj);
     this.tmpObj = {};
   }
