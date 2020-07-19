@@ -1,4 +1,4 @@
-# [JsonEditor](soldor37.github.io/jsonEditor, "project link")
+# [JsonEditor](https://soldor37.github.io/jsonEditor/, "project link")
 
 JSON editor for data with format [ {"key1":"value", "key2": "value"}, {"key1":"value", "key2": "value"} ]
 It is possible to enter data from a file
