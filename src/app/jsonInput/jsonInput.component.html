@@ -6,8 +6,26 @@
                 JSON input
             </span>
         </div>
-        <textarea class="jsonInput-form__input form-control" aria-label="JSON input"
-            placeholder="Put your JSON text here..." [(ngModel)]="textInput"></textarea>
+        <textarea class="jsonInput-form__input form-control" aria-label="JSON input" placeholder="Put your JSON text here...
+Example:
+[
+    {
+    'name': 'Alex',
+    'year' : '2001',
+    'country' : 'Russia'
+    },
+    {
+    'name' : 'George',
+    'year' : '2002',
+    'country' : 'China'
+    },
+    {
+    'name' : 'Julia',
+    'year' : '2003',
+    'country' : 'Japan'
+    }
+]"
+            [(ngModel)]="textInput"></textarea>
     </div>
     <div class="custom-file">
         <input type="file" class="custom-file-input" id="inputGroupFile01"
